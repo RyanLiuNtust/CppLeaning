@@ -11,8 +11,20 @@
 //============================================================================
 
 #include <iostream>
+#include <cv.h>
+#include <highgui.h>
+#include <string>
+#include <time.h>
+#include <omp.h>
+#include <ctime>
 
 int main() {
-	std::cout << "Hello world!!" << std::endl;
+
+	std::string lenaPath = "/home/ryan/workspace/picture/basic/lena.jpg";
+	cv::Mat Lena = cv::imread(lenaPath, 0);
+	cv::namedWindow("lena",0);
+	cv::imshow("lena",Lena);
+	cv::waitKey(0);
+
 	return 0;
 }
