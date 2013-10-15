@@ -17,14 +17,12 @@
 #include <time.h>
 #include <omp.h>
 #include <ctime>
+#include "MatUtilityTesting.h"
 
 int main() {
 
-	std::string lenaPath = "/home/ryan/workspace/picture/basic/lena.jpg";
-	cv::Mat Lena = cv::imread(lenaPath, 0);
-	cv::namedWindow("lena",0);
-	cv::imshow("lena",Lena);
-	cv::waitKey(0);
-
+	MatUtilityTesting *U = new MatUtilityTesting(100, 100, CV_8UC1);
+	U->WriteUsingAtGray();
+	U->ShowImage();
 	return 0;
 }

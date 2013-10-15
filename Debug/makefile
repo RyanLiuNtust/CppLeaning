@@ -44,7 +44,7 @@ all: cpp
 cpp: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/home/ryan/software/opensource/opencv-2.4.6.1/build/lib -L/usr/lib/gcc/x86_64-linux-gnu/4.6/include/omp.h -L/usr/local/include/opencv2 -L/usr/include/boost -fopenmp -o"cpp" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/home/ryan/software/opensource/opencv-2.4.6.1/build/lib -L/usr/lib/gcc/x86_64-linux-gnu/4.6/include/omp.h -L/usr/local/include/opencv2 -L/usr/local/include/opencv -L/usr/include/boost -fopenmp -o"cpp" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
